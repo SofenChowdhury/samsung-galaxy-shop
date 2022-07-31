@@ -7,22 +7,22 @@ const Home = ({ productData, bannerData }) => {
   return (
     <div>
       <SamsungBanner samsungBanner={bannerData.length && bannerData[0]} />
-      {console.log(bannerData)}
-      {console.log(productData )}
+      {/* {console.log(bannerData)}
+      {console.log(productData )} */}
       <div className='products-heading'>
-        <h2>Beset Selling Products</h2>
+        <h2>Best Selling Products</h2>
         <p>Speaker of many variations</p>
       </div>
 
       <div className='products-container'>
         {
           productData.map(
-            (product) => product.name
+            (product) => <Product key={product._id} product={product} />
           )
         }
       </div>
 
-      <FooterBanner />
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </div>
   )
 }
