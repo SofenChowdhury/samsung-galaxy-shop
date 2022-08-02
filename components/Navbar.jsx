@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className='navbar-container'>
       <p>
-        <Link href="">SAMSUNG GALAXY</Link>
+        <Link href="/">SAMSUNG GALAXY</Link>
       </p>
 
       <button type='button' className='cart-icon' onClick="">
