@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { urlFor } from '../lib/client';
+import Image from 'next/image';
 
 const SamsungBanner = ({ samsungBanner }) => {
   return (
