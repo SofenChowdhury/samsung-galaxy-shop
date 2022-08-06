@@ -4,7 +4,6 @@ import { client, urlFor } from '../../lib/client';
 import { AiOutlineMinus , AiOutlinePlus, AiFillStar, AiOutlineStar} from 'react-icons/ai';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
-import Image from 'next/image';
 
 const ProductDetails = ({ products, product }) => {
     const { image, name, details, price } = product;
