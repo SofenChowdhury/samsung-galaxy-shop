@@ -1,14 +1,14 @@
-import React, { CreateContext, UseContext, UseState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { toast } from 'react-hot-toast';
 
-const Context = CreateContext();
+const Context = createContext();
 
 export const StateContext = ({ children }) => {
-    const [showCart, setShowCart] = UseState(false);
-    const [cartItems, setCartItems] = UseState([]);
-    const [totalPrice, setTotalPrice] = UseState(0);
-    const [totalQuantities, setTotalQuantities] = UseState(0);
-    const [qty, setQty] = UseState(1);
+    const [showCart, setShowCart] = useState(false);
+    const [cartItems, setCartItems] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0);
+    const [totalQuantities, setTotalQuantities] = useState(0);
+    const [qty, setQty] = useState(1);
 
     let foundProduct;
     let index;
@@ -97,4 +97,4 @@ export const StateContext = ({ children }) => {
     )
 }
 
-export const UseStateContext = () => UseContext(Context);
+export const UseStateContext = () => useContext(Context);
