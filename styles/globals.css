@@ -60,9 +60,9 @@ width: 100%;
   to { transform: translateX(-50%); }
 }
 
- span.text-red {
-    -webkit-text-stroke: 1px #f02d34;
-    margin-left: 6px;
+span.text-red {
+  -webkit-text-stroke: 1px #f02d34;
+  margin-left: 6px;
 }
 .logo{
   color: gray;
@@ -72,6 +72,16 @@ width: 100%;
 .cart-icon{
   font-size: 25px;
   color: gray;
+  cursor: pointer;
+  position: relative;
+  transition: transform .4s ease;
+  border: none;
+  background-color: transparent;
+}
+
+.select-icon{
+  font-size: 25px;
+  color: rgb(240, 12, 12);
   cursor: pointer;
   position: relative;
   transition: transform .4s ease;
@@ -289,7 +299,7 @@ text-align: end;
 .footer-container{
   color: #324d67;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 80px;
   padding: 30px 10px;
   font-weight: 700;
   display: flex;
@@ -334,6 +344,23 @@ text-align: end;
 .cancel{
   cursor: pointer;
 }
+.checkout-container{
+  margin-top: 15px;
+  overflow: auto;
+max-height: 70vh;
+padding: 20px 10px;
+}
+.checkout{
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+.checkout .cart-checkout-image{
+  width:180px ;
+  height: 150px;
+    border-radius: 15px;
+ background-color: #ebebeb;
+}
 .product-container{
   margin-top: 15px;
   overflow: auto;
@@ -355,14 +382,20 @@ padding: 20px 10px;
   display: flex;
   justify-content: space-between;
   width: 350px;
-   color: #324d67;
-
+  color: #324d67;
+}
+.item-checkout .flex{
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
+  color: #324d67;
 }
 .item-desc .bottom{
   margin-top: 60px;
 }
 .flex h5{
   font-size: 24px;
+  justify-content: space-between;
 }
 .flex h4{
   font-size: 20px;
@@ -373,7 +406,7 @@ padding: 20px 10px;
 }
 .total h3{
   font-size: 22px;
-
+  color: #324d67;
 }
 .remove-item{
   font-size: 24px;
@@ -388,7 +421,6 @@ padding: 20px 10px;
   right: 5px;
 width: 100%;
 padding: 30px 65px;
-
 }
 
 .btn-container{
@@ -715,20 +747,18 @@ margin-top: 160px;
 }
 .top{
   flex-wrap: wrap;
-  gap: 10px;
-
-
+  gap: 20px;
 }
 .item-desc .bottom{
   margin-top: 30px;
 }
 .flex h5{
   font-size: 16px;
-   color: #324d67;
+  color: #324d67;
 }
 .flex h4{
   font-size: 16px;
-   color: black;
+  color: black;
 }
 .cart-bottom{
   padding: 30px;
@@ -746,7 +776,7 @@ margin-top: 160px;
   min-height: 69vh;
 }
 .success, .cancel {
-   width: 370px;
+  width: 370px;
   margin-top: 100px;
   padding: 20px;
 }

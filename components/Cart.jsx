@@ -110,9 +110,14 @@ const Cart = () => {
                 <h3>TK{totalPrice}</h3>
               </div>
               <div className='btn-container'>
-                <button className='btn' type='button' onClick={handleCheckout}>
+                {/* <button className='btn' type='button' onClick={handleCheckout}>
                   Pay with Stripe
-                </button>
+                </button> */}
+                <Link href='/checkout'>
+                  <button className='btn' type='button' onClick={() => setShowCart(false)}>
+                    CHECKOUT
+                  </button>
+                </Link>
               </div>
             </div>
           )}
